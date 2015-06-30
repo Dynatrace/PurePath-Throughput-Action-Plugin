@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 6.1.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.checkandactivatesystemprofileconfiguration" name="Check &amp; Activate SystemProfile Configuration">
+    <information>
+      <category value="" />
+      <displayname value="Check &amp; Activate SystemProfile Configuration" />
+      <description value="My Plugin description ..." />
+      <supportlevel value="unsupported" />
+    </information>
+    <configuration>
+      <property key="username" label="Username" type="string" description="username" default="USER" multiline="false" />
+      <property key="password" label="Password" type="password" description="password" default="" />
+      <property key="levelOne" label="Default Capture Level" type="string" description="Default Capture Level" default="Default" multiline="false" />
+      <property key="levelTwo" label="Second Capture Level" type="string" description="Second Capture Level" default="" multiline="false" />
+      <property key="levelThree" label="Third Capture Level" type="string" description="Third Capture Level" default="" multiline="false" />
+      <property key="levelFour" label="Fourth Capture Level" type="string" description="Fourth Capture Level" default="" multiline="false" />
+      <property key="levelFive" label="Fifth Capture Level" type="string" description="Fifth Capture Level" default="" multiline="false" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.dynatrace.checkandactivatesystemprofileconfiguration.action" name="Check and Activate System Profile Configuration Plugin">
+    <plugin configid="com.dynatrace.checkandactivatesystemprofileconfiguration" class="com.dynatrace.checkandactivatesystemprofileconfiguration.CheckAndActivateSystemProfileConfigAction" />
+  </extension>
+</plugin>
+
