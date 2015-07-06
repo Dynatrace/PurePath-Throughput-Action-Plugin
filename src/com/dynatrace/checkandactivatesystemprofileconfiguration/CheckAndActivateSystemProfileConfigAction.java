@@ -114,7 +114,7 @@ public class CheckAndActivateSystemProfileConfigAction implements Action {
 			activeConfUrl = new URL(protocol, serverURL, port, sysProfileConfURL);		
 			log.finer("Executing URL: " + activeConfUrl.toString());
 			
-			//URL to grab XML file
+			//Grab XML file with active/inactive system profile configurations
 			log.finer("Entering XML file grab");
 			connection = activeConfUrl.openConnection();
 			connection.setRequestProperty("Authorization", basicAuth);
@@ -132,7 +132,7 @@ public class CheckAndActivateSystemProfileConfigAction implements Action {
 			xpathNodeList = (NodeList) xpath.evaluate("configurations/configuration[contains(@isactive, 'true')]", xmlDoc, XPathConstants.NODESET);
 			tempString = xpathNodeList.item(0).getAttributes().getNamedItem("id").toString();
 			activeConfiguration = tempString.replaceAll("\"","").replaceAll("id=","");
-			log.info("activeConfiguration: " + activeConfiguration);
+			log.info("Active Configuration: " + activeConfiguration);
 			
 			//Determine current capture level
 			log.finer("Entering switch statement");
