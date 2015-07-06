@@ -2,10 +2,10 @@
 <?eclipse version="3.2"?>
 <!-- plugin.xml file written by dynaTrace Client 6.1.0 -->
 <plugin>
-  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.checkandactivatesystemprofileconfiguration" name="Check &amp; Activate SystemProfile Configuration">
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.dynatrace.checkandactivatesystemprofileconfiguration" name="PurePath Throughput Action Plugin">
     <information>
       <category value="" />
-      <displayname value="Check &amp; Activate SystemProfile Configuration" />
+      <displayname value="PurePath Throughput Action Plugin" />
       <description value="My Plugin description ..." />
       <supportlevel value="unsupported" />
     </information>
@@ -19,7 +19,7 @@
       <property key="levelFive" label="Fifth Capture Level" type="string" description="Fifth Capture Level" default="" multiline="false" />
     </configuration>
   </extension>
-  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.dynatrace.checkandactivatesystemprofileconfiguration.action" name="Check and Activate System Profile Configuration Plugin">
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.dynatrace.checkandactivatesystemprofileconfiguration.action" name="PurePath Throughput Action Plugin">
     <plugin configid="com.dynatrace.checkandactivatesystemprofileconfiguration" class="com.dynatrace.checkandactivatesystemprofileconfiguration.CheckAndActivateSystemProfileConfigAction" />
   </extension>
 </plugin>
